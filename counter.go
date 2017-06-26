@@ -26,13 +26,8 @@ func main(){
 	//While words are available, continue scanning
 	for scanner.Scan() {
 		word := scanner.Text()
-		if _, present := counter[word]; present{
-			counter[word]++
-		} else {
-			counter[word] = 1
-		}
+		counter[word]++
 	}
-
 
 	//safely parse command line argument
 	//regarding amount of word's occurences to print
